@@ -1,33 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Container from './components/Container.jsx'
+import Card from './components/Card.jsx'
+import Rating from './components/Rating.jsx'
+
 
 function App() {
   return (
-    <div className="App">
-      Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-    </div>
+    <>
+      <Container />
+    </>
   );
 }
 

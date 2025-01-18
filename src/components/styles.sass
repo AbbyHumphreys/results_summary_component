@@ -4,24 +4,36 @@
     margin: auto
 
 .small-container
-    width: 50%
+    width: 100%
+    flex-direction: column
 
 .card
   background-color: #f4f4f4
   border-radius: 8px
   padding: 20px
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
-  width: 50%
+  width: 100%
 
 .rating-container
     display: flex
     width: 100%
     justify-content: space-between
     align-items: center
-    background-color: blue
     margin: 1rem
     padding: 0.5rem
-    border-radius: 10px
+    border-radius: 5px
+  
+button
+  width: 100%
+  margin-left: 1rem
+  border: none
+  padding: 1rem
+  border-radius: 30px
+  background-color: #2e3b5a
+  color: #fbffff
+  
+.rating-icon, .rating-text
+  color: inherit
 
 .rating-icon
     width: 20px
@@ -32,16 +44,31 @@
 
 .reaction
   background-color: rgba(255, 0, 0, 0.2)
-  color: #b30000
 
 .memory
   background-color: rgba(255, 255, 0, 0.2)
-  color: #b3b300
 
 .verbal
   background-color: rgba(0, 128, 0, 0.2)
-  color: #006400
 
 .visual
   background-color: rgba(128, 0, 128, 0.2)
-  color: #4b0082
+
+.reaction
+  .rating-icon,.rating-text
+    color: #b30000
+
+.memory
+  .rating-icon,.rating-text
+    color: #b3b300
+
+.verbal
+  .rating-icon,.rating-text
+    color: #006400
+
+.visual
+  .rating-icon,.rating-text
+    color: #4b0082
+
+.heading
+  margin-left: 1rem

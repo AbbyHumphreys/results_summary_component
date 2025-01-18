@@ -1,8 +1,11 @@
+import Circle from "./Circle"
+
 export default function Card () {
     return (
         <>
             <div className="card">
-                <h1>I am here</h1>
+                <h2 className="card-header">Your Result</h2>
+                <Circle />
             </div>
         </>
     )

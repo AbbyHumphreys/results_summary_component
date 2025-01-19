@@ -1,27 +1,42 @@
-.container
-    display: flex
-    max-width: 40%
-    margin: auto
+@use '_variables' as *
 
-.small-container
+.container
+  display: flex
+  flex-direction: row
+  width: 40%
+  margin: auto
+  justify-content: center
+  align-items: center
+  height: 100vh
+
+  @media (max-width: $breakpoint-medium)
+    width: 60%
+    flex-direction: column
+
+  @media (max-width: $breakpoint-small)
     width: 100%
     flex-direction: column
+
+.small-container
+  width: 100%
+  flex-direction: column
 
 .card
   display: flex
   flex-direction: column
   align-items: center
-  background-color: #5f3ffb
+  background-color: $primary-color
   border-radius: 8px
   padding: 20px
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
   width: 100%
 
-.card-header
-  color: #9b91ff
+.card-header, .score-paragraph
+  color: $heading-color
+  text-align: center
 
 .circle
-  background-color: #462ada
+  background-color: $secondary-color
   width: 200px
   height: 200px
   border-radius: 50%
@@ -30,31 +45,48 @@
   align-items: center
   justify-content: center
   font-weight: 700
+  margin-bottom: 1rem
 
 .score-average
   font-size: 4rem
   margin: 0rem
-  color: #fbffff
-
+  color: $tertiary-color
 
 .rating-container
-    display: flex
-    width: 100%
-    justify-content: space-between
-    align-items: center
-    margin: 1rem
-    padding: 0.5rem
-    border-radius: 5px
-  
+  display: flex
+  width: 100%
+  justify-content: space-between
+  align-items: center
+  margin: 1rem
+  padding: 0.5rem
+  border-radius: 5px
+
+  @media (max-width: $breakpoint-small)
+    margin-right: 0
+    margin-left: 0
+
+h1
+  margin: 0
+  color: $tertiary-color
+
 button
   width: 100%
   margin-left: 1rem
   border: none
   padding: 1rem
   border-radius: 30px
-  background-color: #2e3b5a
-  color: #fbffff
+  background-color: $button-bg-color
+  color: $tertiary-color
+  font-weight: 700
+
+  &:hover
+    background-color: $button-hover-bg-color
   
+  @media (max-width: $breakpoint-small)
+    margin-right: 0
+    margin-left: 0
+    margin-bottom: 1rem
+
 .rating-icon, .rating-text
   color: inherit
 

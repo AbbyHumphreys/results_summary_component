@@ -6,9 +6,11 @@ export default function Rating({ ratingType, score, icon }) {
 
   return (
     <div className={ratingClass}>
-      <img className="rating-icon" src={iconUrl} alt={`${ratingType} icon`} />
-      <p className="rating-text">{ratingType}</p>
-      <p className="rating">{score} / 100</p>
+      <div className="left">
+        <img className="rating-icon" src={iconUrl} alt={`${ratingType} icon`} />
+        <p className="rating-text">{ratingType}</p>
+      </div>
+      <p className="rating">{score} <span className="rating-total">/ 100</span></p>
     </div>
   );
 }
